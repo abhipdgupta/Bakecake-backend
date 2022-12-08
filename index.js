@@ -3,14 +3,10 @@ const app = express();
 const mysql = require("mysql2");
 const cors = require("cors");
 require("dotenv").config();
-app.use(cors());
+app.use(cors({   origin: "https://niksbake.netlify.app"}));
 app.use(express.json());
 
-// const { createHash } = require("crypto");
 
-// function hash(string) {
-//   return createHash("sha256").update(string).digest("hex");
-// }
 let db = mysql.createConnection({
   user: process.env.DB_USER,
   port:process.env.DB_PORT,
