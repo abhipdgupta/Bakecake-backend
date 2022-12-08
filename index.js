@@ -4,11 +4,11 @@ const mysql = require("mysql2");
 const cors = require("cors");
 require("dotenv").config();
 
-app.use((req,res)=>{
-  res.setHeader("Access-Control-Allow-Origin","*")
-  res.setHeader("Access-Control-Allow-Methods","*")
-  res.setHeader("Access-Control-Allow-Headers","*")
-})
+// app.use((req,res)=>{
+//   res.setHeader("Access-Control-Allow-Origin","*")
+//   res.setHeader("Access-Control-Allow-Methods","*")
+//   res.setHeader("Access-Control-Allow-Headers","*")
+// })
 app.use(cors());
 app.use(express.json());
 
